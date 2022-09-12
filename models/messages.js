@@ -1,22 +1,25 @@
-const Sequelize  =  require('sequelize');
+const Sequelize=require('sequelize');
 
-const sequelize  =  require('../util/database');
+const sequelize = require('../util/database')
 
-const Message   =  sequelize.define('message',{
-    id:{
-        type:Sequelize.INTEGER,
+const Message = sequelize.define('message', {
+    id: {
+        type: Sequelize.INTEGER,
         allowNull: false,
         primaryKey: true,
-        autoIncrement:true
+        autoIncrement: true
     },
-    msg:{
-        type:Sequelize.STRING,
-        allowNull:false,
+
+    msg: {
+        type: Sequelize.STRING,
+        allowNull: false
     },
-    username:{
-        type:Sequelize.STRING,
-        allowNull:false
+
+    username: {
+    type: Sequelize.STRING,
+    allowNull: false
     }
+
 });
 
-module.exports  = Message;
+module.exports = Message;

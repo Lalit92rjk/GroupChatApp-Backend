@@ -1,16 +1,16 @@
-const Sequelize = require('sequelize');
+const Sequelize=require('sequelize');
 
-const sequelize  =  require('../util/database');
+const sequelize = require('../util/database')
 
-const Group  =  sequelize.define('group',{
+const Group = sequelize.define('group', {
     id: {
         type: Sequelize.UUID,
-        allowNull : false,
-        primaryKey:true
+        allowNull: false,
+        primaryKey: true
     },
-    groupname:{
-        type:Sequelize.STRING,
-        allowNull:false
+    groupname: {
+        type: Sequelize.STRING,
+        allowNull: false
     }
 });
 

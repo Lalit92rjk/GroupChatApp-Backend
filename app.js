@@ -13,8 +13,6 @@ const Group=require('./models/groups');
 const Usergroup=require('./models/usergroups');
 const Groupmessage=require('./models/groupmessage');
 
-
-
 const cors = require('cors')
 
 //routes.........
@@ -22,8 +20,6 @@ const signlogin=require('./routes/loginsignup');
 const messageroute=require('./routes/message');
 const CreateGroup=require('./routes/creategroup');
 const groupMsgrouter=require('./routes/groupmsgs');
-
-
 
 const app = express();
 
@@ -47,6 +43,7 @@ Group.belongsToMany(User,{through:Usergroup});
 
 User.hasMany(Groupmessage);
 Groupmessage.belongsTo(User);
+
 
 sequelize
 // .sync({ force: true })
